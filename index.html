@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>
+      Calculadora de Infusão de Norepinefrina | Norepinephrine Infusion
+      Calculator
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculadora de Infusão de Norepinefrina</h1>
+      <main id="content">
+        <img src="./img/cat.svg" alt="Cat" />
+
+        <p><strong>Atenção:</strong> Utilize solução glicosada 5%.</p>
+
+        <label for="kg">Peso (kg)</label>
+        <input type="number" name="kg" id="kg" min="0.1" />
+
+        <label for="dose">Dose (mcg)</label>
+        <input type="number" name="dose" id="dose" min="0.1" max="1.5" />
+
+        <label for="mlPerKgPerHour">Taxa de Infusão (ml/kg/h)</label>
+        <input
+          type="number"
+          name="mlPerKgPerHour"
+          id="mlPerKgPerHour"
+          min="0.1"
+          max="6.0"
+        />
+
+        <label id="solution-quantity">Qtd. de solução (ml)</label>
+        <div id="radios">
+          <label>
+            <input
+              type="radio"
+              name="solution-quantity"
+              value="250"
+              checked
+            />250
+          </label>
+          <label>
+            <input type="radio" name="solution-quantity" value="500" />500
+          </label>
+          <label>
+            <input type="radio" name="solution-quantity" value="1000" />1000
+          </label>
+        </div>
+
+        <button type="button" id="calculate">Calcular</button>
+
+        <label id="resultTaxLabel">Taxa de Infusão:</label>
+        <input type="text" id="resultTaxButton" readonly />
+
+        <label id="resultNoreLabel">Quantidade de Norepinefrina:</label>
+        <input type="text" id="resultNoreButton" readonly />
+      </main>
+    </div>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
